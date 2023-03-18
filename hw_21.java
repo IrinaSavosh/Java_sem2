@@ -1,14 +1,16 @@
-// import java.util.logging.*;
+
 import java.util.Arrays;
 import java.util.Scanner;
-
-public class hw_1 {
+import java.util.logging.*;
+public class hw_21 {
+  
    public static void main(String[] args) {
       /*
        Реализуйте алгоритм сортировки пузырьком числового массива (введён вами),
 результат после каждой итерации запишите в лог-файл.
        */
-      int size = 3;
+      
+      int size = 10;
       Scanner in = new Scanner(System.in); // открытие сканера
       int[] array = new int[size]; // создание массива с "0"
 
@@ -18,8 +20,13 @@ public class hw_1 {
       }
    
       in.close(); //закрываем сканер
-      System.out.print (Arrays.toString(array)); // Выводим на экран, полученный массив
-      
+      System.out.println(Arrays.toString(array)); // Выводим на экран, полученный массив
+      Logger log = Logger.getLogger(hw_21.class.getName());
+      ConsoleHandler handler = new ConsoleHandler();
+      log.addHandler(handler);
+      SimpleFormatter s_form = new SimpleFormatter();
+      handler.setFormatter((s_form));  
+
       // сортировка пузырьком
       for (int i = 0; i < size; i++) {
          for (int j = 0; j < size - i - 1; j++) {
@@ -29,6 +36,7 @@ public class hw_1 {
                array[j] = temp;
             }
          }
+         log.info("Тестовове логирование");
       }
       System.out.print (Arrays.toString(array));
    }
