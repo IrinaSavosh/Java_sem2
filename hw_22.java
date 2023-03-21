@@ -1,6 +1,7 @@
 
+// import java.util.Arrays;
 
-public class hw_2 {
+public class hw_22 {
    public static void main(String[] args) {
       /*
        Дана строка (получение через обычный текстовый файл!!!)
@@ -16,5 +17,13 @@ public class hw_2 {
 Студент Петрова получил 4 по предмету Информатика.
 Студент Краснов получил 5 по предмету Физика.
        */
+      // String[] arr = {"фамилия":"Иванов","оценка":"5","предмет":"Математика"};
+      // String[] array = arr.replace('"', ',');
+      // System.out.println(Arrays.toString(array));
+
+      // for (int i = 0; i < array.length; i++) {
+      //    arr.replace('"', '');
+      // }
    }
 }
+
